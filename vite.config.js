@@ -1,6 +1,6 @@
 /*
  * @Author: zhanfenghai
- * @LastEditTime: 2021-02-22 16:51:56
+ * @LastEditTime: 2021-02-23 16:27:01
  * @LastEditors: zhanfenghai
  * @Description:
  * @FilePath: \my-vite2-app\vite.config.js
@@ -8,11 +8,11 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
-// import element3 from "./plugins/element3.js";
+import inject from "./plugins/vite-plugin-inject";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), inject()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
